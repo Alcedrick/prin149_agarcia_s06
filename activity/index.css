@@ -1,0 +1,45 @@
+.ext {
+	color: yellow;
+}
+
+* {
+	font-family: "verdana", "sans serif";
+	font-size: 20px;
+
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+#bootcamp{
+	text-transform: uppercase;
+}
+
+.lang-list{
+	background-color: #90EE90;
+}
+
+.tools-list {
+	border-style: solid;
+	border-width: 2px;
+	border-color: blue;
+}
+
+img + ul {
+	list-style-type: none;
+}
+
+section img {
+	height: 20vh;
+	width: 20vh;
+	border-radius: 150px;
+}
+
+ul ~ p {
+	text-align: center;
+}
+
+section > ul > li {
+	letter-spacing: 10px;
+}

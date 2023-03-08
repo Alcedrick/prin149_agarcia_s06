@@ -38,7 +38,7 @@
 			however, html was made to determine the layout of the page by creating element not for styling
 	 -->
 	 <!-- navbar -->
-	 <nav>
+	 <nav id="top">
 	 	<a href="#landing">Centro Escolar University</a>
 	 	<div>
 	 		<a href="#landing">Home</a>
@@ -49,31 +49,39 @@
 
 	 <h1>Hello World!</h1>
 	 <!-- home page -->
-	 <section>
+	 <section id="landing">
 	 	<h2>Welcome to Computer Education</h2>
-	 	<h3>Ciencia y Virtud</h3>
+	 	<h3 id="ceu-motto">Ciencia y Virtud</h3>
 
-	 	<img src="" alt="">
+	 	<img src="https://place-puppy.com/450x450" alt="image">
 	 	<!-- offerings -->
-	 	<ol>
-	 		<li>Bachelor of Science in Computer Science</li>
-	 		<li>Bachelor of Science in Information Technology</li>
-	 		<li>Bachelor of Science in Computer Engineering</li>
+	 	<!-- ids are unique of an element -->
+	 	<ol id="ceu-learning-list">
+	 		<!-- class are used to group together elements. therefore, we can now style multiple elements of the same class -->
+	 		<li class="offering-item">Bachelor of Science in Computer Science</li>
+	 		<li class="offering-item">Bachelor of Science in Information Technology</li>
+	 		<li class="offering-item">Bachelor of Science in Computer Engineering</li>
 	 	</ol>
 	 </section>
 
 	 <!-- register -->
-	 <section>
+	 <section id="register">
 	 	<h2>Register</h2>
 	 	<form action="https://www.ceu.edu.ph/"></form>
 	 		<label for="fname">First Name:</label>
+	 		<br />
 	 		<input id="fname" type="text" required autocomplete>
+	 		<br />
 
 	 		<label for="lname">Last Name:</label>
+	 		<br />
 	 		<input id="lname" type="text" required autocomplete>
+	 		<br />
 
 	 		<label for="email">Email:</label>
+	 		<br />
 	 		<input id="email" type="email" required autocomplete>
+	 		<br />
 
 	 		<button>Enroll Now!</button>
 	 </section>

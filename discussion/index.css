@@ -1,4 +1,202 @@
 /*
 	External styling - is a method of applying CSS styles to an html document by linking to an external css file
 		- <link> element to connect the html document to the CSS file
+
+	syntax:
+		selector {
+			property: value;
+		}
+
+	selector
+		- is a pattern used to select one or more html elements to apply a set of css style
+		-CSS selectors:
+			- universal selector
+			- type selector
+			- id selector
+			- class selector
+			- attribute selector
+			- adjacent sibling selector
+			- descendant selector
+			- general sibling selector
+			- child selector
 */
+/* Universal Selector - it is represented by an asterisk and matches any element in an html document
+					- applies a style to all html elements
+*/
+*{
+	/* allows us to select ALL of our elements
+		monospace is a fallback font. in the event that the machine used to view your document does not have the declared font, we will use the fallback as font
+
+		font-family: changes the font syle of text
+		font-size: changes the size of the text
+	*/
+	font-family: "Courier New", monospace;
+	font-size: 20px;
+	/* CSS reset*/
+	margin: 0;
+	padding: 0;
+}
+
+/*type selector
+	- also known as tag selector
+	- is used to select all instances of html element on a page. it select elements based on their tag name
+*/
+body {
+	background-color: skyblue;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+nav {
+	background-color: white;
+}
+
+h1 {
+	color: black !important;
+	text-align: center;
+	font-size: 2rem;
+	/* rem is a measurement which means num multiplied by the default size of root element's font(16px)
+		font-size 2 * 16 = 32rem
+	*/
+}
+
+/*
+	Specifity Rule
+		- measure of how specific a css selector is in targeting a particular html element
+		- it determines which css rule will be applied to an element when there are multiple css rules that match it
+
+	hierarchy (hightest to lowest)
+		- !important
+			- any declaration with !important will be the highest priority
+			this is useful if you want to override a css style
+			- inline styling with !important
+			- internal styling with !important
+			- external styling with !important
+		- id selector (#example)
+		- class selector, attribute selector and pseudo-classes
+		- type selector or pseudo-elements
+		- inline styling
+		- internal styling
+		- external styling
+
+*/
+
+section {
+	height: 100vh;
+	/* vh means viewport height meaning this measurement takes the percentage of the overall height of the screen you are viewing with */
+	text-align: center;
+	/* it allows us to align our text horizontally*/
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+ol {
+	list-style-type: none;
+}
+
+/*register section*/
+
+form {
+	text-align: center;
+	background-color: white;
+	border: 2px solid black;
+	padding: 5px;
+	height: 185px;
+	width: 40vw;
+	/* vw - viewport width - is a measurement that is based on a percentage of your screen's width*/
+	position: relative;
+	left: 37.25%;
+	/* the position property changes the position of an element based on a certain criteria 
+		
+		position: relative
+			- it allows to move our element i relation to its original position in the html document
+		left property
+			- is used alongside the position property to add a certain measurement to the left of the element
+		the value % is based on the measurement of the parent element. the parent element being the section tag which is a block element
+	*/
+}
+
+button {
+	background-color: #cf0053;
+	color: white;
+	border: 0;
+	border-radius: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+/* id selector
+	- is used to select a specific html element based on its unique 'id' attribute, to identify a single element on a web page and can be used to apply css style to that specific element
+
+	#id {
+		property: value
+	}
+*/
+
+#ceu-motto {
+	letter-spacing: 5px;
+}
+
+/*
+	class selector
+		- used to select one or more html elements that share the same class attributes.
+		- used to group elements together based on a common characteristics or purpose
+*/
+
+.offering-item {
+	text-transform: uppercase;
+}
+
+/* attribute selector - allows us to select particular elements with the same attributes
+	tagname[attribute]
+		border-width:allows us to determine the thickness of an element's border
+		border-style: allows us to determine the style of the border
+		border-color: allows us to determine the color of an element's border
+*/
+
+input[required] {
+	border-width: 2px;
+	border-style: solid;
+	border-color: navy;
+	width: 90%;
+}
+
+/* adjacent sibling selector - it allows us to select a particular element that immediately follow a sibling element
+		- selector + selector
+*/
+
+#ceu-motto + img {
+	height: 300px;
+	width: 300px;
+	border-radius: 150px;
+}
+
+/* descendant selector allows us to select elements that are the descendants of the first selector(ancestor)
+	- ancestor descendant
+*/
+
+#ceu-learning-list li {
+	color: #075966;
+}
+
+/* genera sibling selector allows us to select sibling that are after our previous sibling (first selector)
+	- first selector ~ selector 
+h2 ~ a {
+	text-decoration: none;
+}
+*/
+
+a {
+	text-decoration: none;
+}
+
+/* child selector allows us to select a particular child of a parent element*/
+
+
+section > form > label {
+	color: rgb(0,0,128);
+}
